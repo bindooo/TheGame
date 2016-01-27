@@ -39,8 +39,10 @@ public class Settings {
             out = new BufferedWriter(new OutputStreamWriter(
                     files.writeFile(".mrnom")));
             out.write(Boolean.toString(soundEnabled));
+			out.write("\n");
             for (int i = 0; i < 5; i++) {
                 out.write(Integer.toString(highscores[i]));
+				out.write("\n");
             }
         } catch (IOException e) {
         } finally {
